@@ -186,18 +186,28 @@ img {
     height: 350px;
     width: 250px;
     padding: 20px;
+    position: relative;
 }
 
+/* CSS for the profile picture */
+.profile-picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    z-index: 10; /* Higher z-index to ensure it is above the bubbles */
+}
 
 .tabs-container {
     font-size: 24px;
     display: flex;
     justify-content: center;
+    padding: 15px;
+    padding-left: 65px;
     /* Center the tabs */
     align-items: center;
     /* Align items vertically in the center */
     margin-bottom: 25px;
-    padding: 15px;
+
     border-bottom: 1px solid white;
     position: relative;
     /* Allow absolute positioning of left-tabs */
@@ -252,6 +262,16 @@ img {
     height: 50px;
 }
 
+#resume {
+    z-index: 11; /* Higher z-index to ensure it is above the bubbles */
+}
+
+#welcome {
+    z-index: 11; /* Higher z-index to ensure it is above the bubbles */
+}
+#background {
+    z-index: 11; /* Higher z-index to ensure it is above the bubbles */
+}
 .icon img+img {
     display: none;
     /* Hide the second icon initially */
@@ -323,6 +343,7 @@ body {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+    z-index: 10; /* Higher z-index to ensure it is above the bubbles */
 
 }
 
@@ -351,5 +372,6 @@ body {
     margin: auto;
     position: relative;
     padding-bottom: 155px;
+    z-index: 10; /* Higher z-index to ensure it is above the bubbles */
     /* Adds padding to the bottom to prevent cut-off */
 }
