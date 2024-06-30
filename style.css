@@ -209,7 +209,6 @@ img {
     display: flex;
     justify-content: center;
     padding: 15px;
-    padding-left: 100px;
     /* Center the tabs */
     align-items: center;
     /* Align items vertically in the center */
@@ -231,7 +230,7 @@ img {
 }
 
 .tabs-center {
-    /* padding-left: 150px; */
+    padding-left: 150px; 
     display: flex;
 
 }
