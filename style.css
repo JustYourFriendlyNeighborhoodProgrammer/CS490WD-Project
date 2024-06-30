@@ -1,0 +1,355 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    color: white;
+}
+
+body {
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #300018, #000042;
+    color: white;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #300018, #000042;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ffffff;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+center {
+    font-size: 20px;
+
+}
+
+/* Kevin Design */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.tab-content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+img {
+    height: 350px;
+    width: 250px;
+    padding: 20px;
+}
+
+
+.tabs-container {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    /* Center the tabs */
+    align-items: center;
+    /* Align items vertically in the center */
+    margin-bottom: 25px;
+    padding: 15px;
+    border-bottom: 1px solid white;
+    position: relative;
+    /* Allow absolute positioning of left-tabs */
+    list-style: none;
+}
+
+.tabs-left {
+    position: absolute;
+    left: 0;
+    display: flex;
+    margin: 15px;
+    gap: 35px;
+    /* Space between the sound and settings icons */
+}
+
+.tabs-center {
+    /* padding-left: 150px; */
+    display: flex;
+
+}
+
+#unmute-icon {
+    width: 60px;
+    height: 60px;
+    padding-right: 0px;
+}
+
+/* #unmute-icon::after {
+    content: '';
+    position: absolute;
+    height: 107%;
+    width: 107%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom right, white black);
+    z-index: -1;
+}
+
+#unmute-icon:hover {
+    z-index: 0;
+    box-shadow: 40px 0 100px white, -40px 0 100px white;
+} */
+
+#mute-icon {
+    width: 60px;
+    height: 60px;
+    padding-right: 0px;
+}
+
+#SettingsIcon {
+    padding-top: 25px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon img+img {
+    display: none;
+    /* Hide the second icon initially */
+}
+
+.icon img {
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* left: 0; */
+    min-width: max-content;
+    border: none;
+    border-radius: 25px;
+    background: radial-gradient(circle, black 0%, transparent 100%);
+    list-style: none;
+    padding: 55px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #201f1f49;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.tab {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.tab.active {
+    background-color: #300018, #000042;
+}
+
+.tab:hover {
+    background-color: #300018, #000042;
+}
+
+body {
+    user-select: none;
+    /* Disables text selection */
+    -webkit-user-select: none;
+    /* Disables text selection in Safari */
+    overflow: hidden;
+    /* Prevents body scroll */
+}
+
+[data-tab-content] {
+    max-height: calc(100vh - 20px);
+    /* Ensures it fits within the viewport */
+    overflow-y: scroll;
+    /* Allows scrolling but hides scrollbar */
+    padding: 10px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+[data-tab-content]::-webkit-scrollbar {
+    display: none;
+    /* Hides scrollbar for Chrome, Safari, and Opera */
+}
+
+/* Disable text highlighting */
+[data-tab-content],
+[data-tab-content] * {
+    user-select: none;
+}
+
+[data-tab-content] section {
+    max-width: 800px;
+    /* Adjust width as needed */
+    margin: auto;
+    position: relative;
+    padding-bottom: 155px;
+    /* Adds padding to the bottom to prevent cut-off */
+}

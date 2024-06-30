@@ -1,0 +1,74 @@
+/* #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#play-button {
+    font-size: 80px;
+    color: white;
+    cursor: pointer;
+} */
+
+
+#lava-lamp-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #300018, #000042);
+    overflow: hidden;
+}
+
+.lava-bubble {
+    filter: url(#goo) blur(40px);
+    position: absolute;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    animation: float 10s ease-in-out infinite, transformBubble 5s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+@keyframes transformBubble {
+    0% {
+        border-radius: 50% 50% 70% 40% / 52% 62% 38% 48%;
+        /* Initial rounded shape */
+    }
+
+    25% {
+        border-radius: 70% 40% 40% 70% / 52% 62% 38% 48%;
+        /* Adjusted rounded shape */
+    }
+
+    50% {
+        border-radius: 40% 60% 80% 40% / 52% 62% 38% 48%;
+        /* More rounded */
+    }
+
+    75% {
+        border-radius: 40% 70% 50% 50% / 40% 66% 34% 90%;
+        /* Different rounding */
+    }
+
+    100% {
+        border-radius: 50% 50% 70% 30% / 52% 62% 38% 48%;
+        /* Return to initial shape */
+    }
+}
