@@ -364,17 +364,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Remove the event listeners after the first interaction
-        document.removeEventListener('mousemove', startInteraction);
+        document.removeEventListener('click', startInteraction);
+        document.removeEventListener('keydown', startInteraction);
+        //document.removeEventListener('mousemove', startInteraction);
+        document.removeEventListener('touchstart', startInteraction);
     }
 
     // Function to check if document is fully loaded
     function checkReadyState() {
         if (document.readyState === 'complete') {
-            document.addEventListener('mousemove', startInteraction);
+            document.addEventListener('click', startInteraction);
+            document.addEventListener('keydown', startInteraction);
+            //document.addEventListener('mousemove', startInteraction);
+            document.addEventListener('touchstart', startInteraction);
+
         } else {
             // If not loaded, wait for it
             window.addEventListener('load', () => {
-                document.addEventListener('mousemove', startInteraction);
+                document.addEventListener('click', startInteraction);
+                document.addEventListener('keydown', startInteraction);
+               // document.addEventListener('mousemove', startInteraction);
+                document.addEventListener('touchstart', startInteraction);
+    
             });
         }
     }
