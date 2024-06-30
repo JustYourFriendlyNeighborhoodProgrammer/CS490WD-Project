@@ -1,9 +1,6 @@
 # CS490WD-Project
  
 # Website Development Schedule
-
-This schedule will help you plan when to complete parts of your website to ensure you stay on track for the semester. Your website needs to include the following sections:
-
 ## Midterm Requirements
 - **Professional Bio**
 - **Professional Image**
@@ -56,5 +53,3 @@ This schedule will help you plan when to complete parts of your website to ensur
 
 4. **By Friday, July 26:**
    - Any other revisions or finishing touches (note this is a Friday and not a Sunday)
-
-This schedule is designed to help you manage your time effectively and ensure you meet all the necessary deadlines. Good luck with your project!
